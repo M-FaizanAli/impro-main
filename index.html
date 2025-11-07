@@ -72,8 +72,8 @@
       <!-- Logo & Brand -->
       <a class="logo" href="/" aria-label="Impro Marine Service - Home">
         <img
-          src="/images/impro-marine-logo-256.webp"
-          srcset="/images/impro-marine-logo-256.webp 256w, /images/impro-marine-logo-512.webp 512w"
+          src="https://marine.impro-solution.com/images/impro-marine-logo-256.webp"
+          srcset="https://marine.impro-solution.com/images/impro-marine-logo-256.webp 256w, https://marine.impro-solution.com/images/impro-marine-logo-512.webp 512w"
           sizes="(max-width: 900px) 48px, 56px"
           width="56" height="56"
           alt="Impro Marine Service - Anchor Logo"
@@ -155,85 +155,328 @@
 <!-- Menu Overlay (Mobile Only) -->
 <div class="menu-overlay" aria-hidden="true"></div>
 
-<header id="home" class="hero">
-  <div class="content">
-    <h1>
-      We provide end-to-end marine services: ship-recycling partnerships,
-      full shipyard acquisitions, LNG and marine scrap logistics, and export
-      of marine stock (aluminium plates, engines, generators, and spares).
-      All ex-ship items are sold strictly
-    </h1>
+<!-- Revamped Hero Section - Exact Match -->
+<div id="home" class="hero-revamped-exact">
+  <!-- Background Image with Overlay -->
+  <div class="hero-bg-wrapper">
+    <img 
+      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+      alt="Marine shipyard" 
+      class="hero-bg-image"
+    />
+    <div class="hero-bg-overlay"></div>
+  </div>
 
-    <p>
-      Invest in Green Shipyards in South Asia — Partner or Acquire 100%,
-      and Recycle Your Own Ships, LNG Vessels, and Marine Scrap Stock<em>as-is</em>.
-    </p>
+  <!-- Content -->
+  <div class="hero-content-wrapper">
+    <div class="hero-content-inner">
+      <!-- Badge -->
+      <div class="hero-badge-wrapper">
+        <span class="hero-badge">Green Shipyard Solutions</span>
+      </div>
 
-    <div class="cta">
-      <a href="#stock" class="btn-cta">Explore Opportunities</a>
+      <!-- Main Headline -->
+      <h1 class="hero-headline">
+        End-to-End Marine Services & Recycling
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="hero-subheadline">
+        Partner or acquire 100% of green shipyards in South Asia. 
+        We handle ship recycling, LNG logistics, and export of marine stock.
+      </p>
+
+      <!-- Feature List -->
+      <div class="hero-features">
+        <!-- Ship Recycling -->
+        <div class="hero-feature-item">
+          <div class="hero-feature-icon hero-icon-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2-1a2.4 2.4 0 0 1 2-1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2-1a2.4 2.4 0 0 1 2-1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2-1"/>
+              <path d="M2 16.5V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-1.5"/>
+              <path d="M4 8l4-4 4 4"/>
+              <path d="M8 4v8"/>
+              <path d="M12 8l4-4 4 4"/>
+              <path d="M16 4v8"/>
+            </svg>
+          </div>
+          <div class="hero-feature-content">
+            <div class="hero-feature-title">Ship Recycling</div>
+            <p class="hero-feature-desc">Full partnerships & acquisitions</p>
+          </div>
+        </div>
+
+        <!-- LNG & Marine Scrap -->
+        <div class="hero-feature-item">
+          <div class="hero-feature-icon hero-icon-green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"/>
+              <path d="m15 5-3-3-3 3"/>
+              <path d="m9 19 3 3 3-3"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <div class="hero-feature-content">
+            <div class="hero-feature-title">LNG & Marine Scrap</div>
+            <p class="hero-feature-desc">Logistics solutions</p>
+          </div>
+        </div>
+
+        <!-- Marine Stock Export -->
+        <div class="hero-feature-item">
+          <div class="hero-feature-icon hero-icon-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div class="hero-feature-content">
+            <div class="hero-feature-title">Marine Stock Export</div>
+            <p class="hero-feature-desc">Plates, engines, generators</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hero-cta-wrapper">
+        <a href="#offers" class="hero-cta-button">
+          Explore Opportunities
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust Indicator -->
+      <div class="hero-trust-indicator">
+        <p class="hero-trust-text">
+          All ex-ship items sold strictly in compliance with international maritime standards
+        </p>
+      </div>
     </div>
   </div>
-</header>
 
-<section class="offers" id="offers">
-  <h2>Current Offers – Marine Yard</h2>
-  <div class="arrows">
-    <button class="arrow" aria-label="prev" id="prevBtn">❮</button>
-    <button class="arrow" aria-label="next" id="nextBtn">❯</button>
-  </div>
-  <div class="slider" id="offerSlider">
+  <!-- Decorative Bottom Gradient -->
+  <div class="hero-bottom-gradient"></div>
+</div>
 
-    <article class="offer-card">
-      <div>
-        <h3>LNG grade aluminum from ship</h3>
-        <p>Genuine plates direct from yard lots. Full lot ID and source record available.</p>
-        <p><span class="badge">Chem test</span><span class="badge">Hardness</span><span class="badge">UT</span><span class="badge">Thickness</span><span class="badge">Visual</span></p>
-        <p>Local labs at site and we can run spectro chemistry, Brinell or Rockwell hardness, ultrasonic flaw check, and gauge thickness by request.</p>
-      </div>
-      <p><strong>Site visit allowed</strong> with guide and safety gear. Photo record before booking.</p>
-    </article>
-    <article class="offer-card">
-      <div>
-        <h3>Deal through Impro Solutions UK Ltd</h3>
-        <p>Since 2019 registered in United Kingdom. All proforma and contract issued from UK side. Buyer protection written inside contract.</p>
-        <p><span class="badge">UK bank</span><span class="badge">LC or TT</span><span class="badge">SGS or BV</span></p>
-      </div>
-      <p>Clear papers: invoice, packing, COO where applicable, HS code advisory.</p>
-    </article>
-    <article class="offer-card">
-      <div>
-        <h3>All equipment and spares on demand</h3>
-        <p>Engines, pumps, valves, motors, gearboxes, compressors, navigation items, cables, panels. Share demand list and target brand if any.</p>
-        <p><span class="badge">Lot trace</span><span class="badge">Photos</span><span class="badge">Video</span></p>
-      </div>
-      <p>We shortlist lots that match specifications and age so you do not waste time.</p>
-    </article>
-    <article class="offer-card">
-      <div>
-        <h3>Prime generators from demolished ships</h3>
-        <p>Alternators and prime movers in excellent condition taken from ships retired early.</p>
-        <p><span class="badge">Load test</span><span class="badge">Insulation test</span><span class="badge">Vibration check</span></p>
-      </div>
-      <p>Popular with buyers in USA UK Japan China Germany for backup and industrial reuse.</p>
-    </article>
-    <article class="offer-card">
-      <div>
-        <h3>Metal scrap and alloy mix</h3>
-        <p>Stainless grades, copper, brass, bronze, and carbon steel lots from safe zones of the yard.</p>
-        <p><span class="badge">Photo proof</span><span class="badge">Weighbridge</span><span class="badge">Mag test</span></p>
-      </div>
-      <p>Packaging option: bundles or ISPM pallets with barcode list.</p>
-    </article>
+<!-- Current Offers Section - Revamped Carousel -->
+<section class="offers-revamped" id="offers">
+  <div class="offers-container">
+    <!-- Section Header -->
+    <div class="offers-header">
+      <h2 class="offers-title">Current Offers — Marine Yard</h2>
+      <p class="offers-subtitle">
+        Explore our current inventory and partnership opportunities
+      </p>
+    </div>
 
-    <article class="offer-card">
-      <div>
-        <h3>Client yard access</h3>
-        <p>Buyer team can visit the yard with our escort after basic compliance check and booking.</p>
-        <p><span class="badge">Escort</span><span class="badge">Safety gear</span><span class="badge">Photo zone</span></p>
-      </div>
-      <p>Remote buyers get live video call and measurement on camera.</p>
-    </article>
+    <!-- Carousel Wrapper -->
+    <div class="carousel-wrapper">
+      <!-- Carousel Container -->
+      <div class="carousel-container" id="offerSlider">
+        <!-- Card 1 - LNG Grade Aluminum -->
+        <div class="carousel-item">
+          <div class="offer-card-new">
+            <!-- Glow effect -->
+            <div class="card-glow"></div>
+            
+            <!-- Content -->
+            <div class="card-content">
+              <!-- Title -->
+              <h3 class="card-title">LNG grade aluminum from ship</h3>
 
+              <!-- Description -->
+              <p class="card-description">
+                Genuine plates direct from yard lots. Full lot ID and source record available.
+              </p>
+
+              <!-- Badges -->
+              <div class="card-badges">
+                <span class="card-badge badge-primary">Chem test</span>
+                <span class="card-badge">Hardness</span>
+                <span class="card-badge">UT</span>
+                <span class="card-badge">Thickness</span>
+                <span class="card-badge">Visual</span>
+              </div>
+
+              <!-- Details -->
+              <div class="card-details">
+                <p>
+                  Local labs at site and we can run spectro chemistry, Brinell or Rockwell hardness, ultrasonic flaw check, and gauge thickness by request.
+                </p>
+                <p class="card-highlight">
+                  Site visit allowed with guide and safety gear. Photo record before booking.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 - Impro Solutions -->
+        <div class="carousel-item">
+          <div class="offer-card-new">
+            <!-- Glow effect -->
+            <div class="card-glow"></div>
+            
+            <!-- Content -->
+            <div class="card-content">
+              <!-- Title -->
+              <h3 class="card-title">Deal through Impro Solutions UK Ltd</h3>
+
+              <!-- Description -->
+              <p class="card-description">
+                Since 2019 registered in United Kingdom. All proforma and contract issued from UK side. Buyer protection written inside contract.
+              </p>
+
+              <!-- Badges -->
+              <div class="card-badges">
+                <span class="card-badge badge-primary">UK bank</span>
+                <span class="card-badge">LC or TT</span>
+                <span class="card-badge">SGS or BV</span>
+              </div>
+
+              <!-- Details -->
+              <div class="card-details">
+                <p>
+                  Clear papers: invoice, packing, COO where applicable, HS code advisory.
+                </p>
+              </div>
+
+              <!-- Additional Info -->
+              <div class="card-footer">
+                <div class="card-status">
+                  <div class="status-dot"></div>
+                  Registered UK company since 2019
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 - Equipment & Spares -->
+        <div class="carousel-item">
+          <div class="offer-card-new">
+            <!-- Glow effect -->
+            <div class="card-glow"></div>
+            
+            <!-- Content -->
+            <div class="card-content">
+              <!-- Title -->
+              <h3 class="card-title">All equipment and spares on demand</h3>
+
+              <!-- Description -->
+              <p class="card-description">
+                Engines, pumps, valves, motors, gearboxes, compressors, navigation items, cables, panels. Share demand list and target price if any.
+              </p>
+
+              <!-- Badges -->
+              <div class="card-badges">
+                <span class="card-badge badge-primary">Lot trace</span>
+                <span class="card-badge">Photos</span>
+                <span class="card-badge">Video</span>
+              </div>
+
+              <!-- Details -->
+              <div class="card-details">
+                <p>
+                  We shortlist lots that match specifications and age so you do not waste time.
+                </p>
+              </div>
+
+              <!-- Quick Stats -->
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-label">Response Time</div>
+                  <div class="stat-value">24-48 hours</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Documentation</div>
+                  <div class="stat-value">Full support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 - Generators -->
+        <div class="carousel-item">
+          <div class="offer-card-new">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <h3 class="card-title">Prime generators from demolished ships</h3>
+              <p class="card-description">
+                Alternators and prime movers in excellent condition taken from ships retired early.
+              </p>
+              <div class="card-badges">
+                <span class="card-badge badge-primary">Load test</span>
+                <span class="card-badge">Insulation test</span>
+                <span class="card-badge">Vibration check</span>
+              </div>
+              <div class="card-details">
+                <p>Popular with buyers in USA UK Japan China Germany for backup and industrial reuse.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 - Metal Scrap -->
+        <div class="carousel-item">
+          <div class="offer-card-new">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <h3 class="card-title">Metal scrap and alloy mix</h3>
+              <p class="card-description">
+                Stainless grades, copper, brass, bronze, and carbon steel lots from safe zones of the yard.
+              </p>
+              <div class="card-badges">
+                <span class="card-badge badge-primary">Photo proof</span>
+                <span class="card-badge">Weighbridge</span>
+                <span class="card-badge">Mag test</span>
+              </div>
+              <div class="card-details">
+                <p>Packaging option: bundles or ISPM pallets with barcode list.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 - Yard Access -->
+        <div class="carousel-item">
+          <div class="offer-card-new">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <h3 class="card-title">Client yard access</h3>
+              <p class="card-description">
+                Buyer team can visit the yard with our escort after basic compliance check and booking.
+              </p>
+              <div class="card-badges">
+                <span class="card-badge badge-primary">Escort</span>
+                <span class="card-badge">Safety gear</span>
+                <span class="card-badge">Photo zone</span>
+              </div>
+              <div class="card-details">
+                <p>Remote buyers get live video call and measurement on camera.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button class="carousel-nav carousel-prev" id="prevBtn" aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+      </button>
+      <button class="carousel-nav carousel-next" id="nextBtn" aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
 

@@ -35,7 +35,8 @@ export class OffersSlider {
   private scrollByCard(direction: number): void {
     if (!this.slider) return;
 
-    const card = this.slider.querySelector<HTMLElement>('.offer-card');
+    // Support both old and new card selectors
+    const card = this.slider.querySelector<HTMLElement>('.offer-card, .carousel-item');
     if (!card) return;
 
     const amount = card.offsetWidth + 28; // card width + gap
