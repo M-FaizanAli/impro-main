@@ -1,7 +1,11 @@
 # Dependencies
 node_modules/
 dist/
+dist-ssr/
 .DS_Store
+
+# Vercel
+.vercel
 
 # Build output
 *.log

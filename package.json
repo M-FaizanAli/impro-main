@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "postinstall": "npm rebuild esbuild"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

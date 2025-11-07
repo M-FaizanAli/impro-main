@@ -2,8 +2,6 @@
 // Header Component - TypeScript
 //
 
-import { HeaderConfig } from '../types/header';
-
 export class Header {
   private hamburger: HTMLButtonElement | null;
   private navMenu: HTMLElement | null;

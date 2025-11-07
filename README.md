@@ -2,7 +2,33 @@
 
 A modern frontend project for Impro UK Marine Service built with TypeScript, Tailwind CSS, and Vite.
 
-## 🚀 Quick Start
+## 🚀 Deployment on Vercel
+
+This project is optimized for **Vercel deployment**.
+
+### Deploy to Vercel (Recommended)
+
+1. **Quick Deploy**:
+   - Push your code to GitHub
+   - Visit [vercel.com/new](https://vercel.com/new)
+   - Import your repository
+   - Vercel auto-detects Vite - click "Deploy"!
+
+2. **Deploy via CLI**:
+   ```bash
+   npm install -g vercel
+   vercel
+   ```
+
+### Vercel Configuration
+
+The project includes `vercel.json` with:
+- ✅ SPA routing fallback
+- ✅ Asset caching (1 year for images/CSS/JS)
+- ✅ Build command: `npm run build`
+- ✅ Output directory: `dist`
+
+## 🛠️ Local Development
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -10,28 +36,9 @@ A modern frontend project for Impro UK Marine Service built with TypeScript, Tai
 
 ### Installation
 
-**Important:** If you encounter `EBUSY` errors with `esbuild` or `rollup` during installation:
-
-1. **Close VS Code** completely
-2. Open a fresh terminal/PowerShell window
-3. Navigate to the project folder:
-```bash
-cd e:\node_js\impro-main
-```
-
-4. Delete node_modules and package-lock.json:
-```bash
-rmdir /s /q node_modules
-del package-lock.json
-```
-
-5. Install dependencies:
+**Quick Install:**
 ```bash
 npm install
-```
-
-6. Run development server:
-```bash
 npm run dev
 ```
 
