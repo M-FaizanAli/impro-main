@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-light text-text-dark;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold leading-tight;
+  }
+
+  a {
+    @apply transition-all duration-200;
+  }
+
+  img,
+  svg,
+  video {
+    @apply max-w-full h-auto block;
+  }
+
+  button {
+    @apply cursor-pointer border-none bg-none;
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative font-bold text-sm px-3 py-2 whitespace-nowrap transition-colors duration-200;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-3 right-3 h-0.5 bg-primary-orange scale-x-0 transition-transform duration-200;
+    content: '';
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    @apply text-primary-orange;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply scale-x-100;
+  }
+
+  .btn-cta {
+    @apply inline-flex items-center gap-2.5 bg-primary-orange text-white px-9 py-4 rounded-full font-bold text-base transition-all duration-300 shadow-lg hover:bg-primary-orange-light hover:-translate-y-0.5 hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2.5 bg-white/15 backdrop-blur-sm text-white px-9 py-4 rounded-full font-bold text-base transition-all duration-300 border-2 border-white/30 hover:bg-white/25 hover:border-white/50 hover:-translate-y-0.5;
+  }
+
+  .badge {
+    @apply inline-block bg-primary-orange-lighter text-amber-900 px-2.5 py-1.5 rounded-lg font-bold text-xs mr-1.5 mb-2;
+  }
+
+  .chip {
+    @apply inline-block bg-primary-orange-lighter text-amber-900 px-3 py-1.5 rounded-lg font-bold text-xs;
+  }
+
+  .social-icon {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-white text-base transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 text-center hover:-translate-y-2;
+  }
+
+  .card img {
+    @apply w-full h-56 object-cover;
+  }
+
+  .card-content {
+    @apply p-6;
+  }
+
+  .learn-more {
+    @apply inline-block mt-3 px-6 py-2.5 bg-primary-orange text-white rounded-lg font-semibold transition-colors duration-200 hover:bg-primary-orange-light;
+  }
+
+  .offer-card {
+    @apply bg-gradient-to-b from-cyan-900 to-blue-950 border border-cyan-700 rounded-2xl shadow-lg p-6 min-h-64 flex flex-col justify-between;
+  }
+
+  .hex {
+    @apply w-15 h-15 flex items-center justify-center rounded-2xl bg-yellow-100 border-2 border-yellow-300 font-bold text-xs text-amber-900;
+  }
+
+  .point {
+    @apply grid grid-cols-[60px_1fr] gap-4 items-start bg-white border border-border-light rounded-xl p-4 shadow-sm transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  .contact-card {
+    @apply bg-blue-50 border border-border-light rounded-2xl p-7 text-center shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md;
+  }
+
+  .svc-card {
+    @apply bg-white border border-border-light rounded-2xl shadow-md p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Custom animations */
+@keyframes gradientShift {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -50px) scale(1.1);
+  }
+}
