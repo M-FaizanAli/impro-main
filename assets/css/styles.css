@@ -102,11 +102,9 @@ button {
    HEADER - DESKTOP
    ===================================================== */
 .site-header {
-  position: sticky;
-  top: 0;
+  /* Important: No position property here - allows sticky children */
   z-index: 1000;
   background: var(--bg-white);
-  box-shadow: var(--shadow-md);
 }
 
 /* Top Bar */
@@ -114,6 +112,8 @@ button {
   background: var(--bg-white);
   border-bottom: 1px solid var(--border-light);
   padding: 8px 0;
+  position: relative;
+  z-index: 999;
 }
 
 .topbar-inner {
@@ -203,6 +203,27 @@ button {
 .main-nav {
   background: var(--bg-white);
   padding: 12px 0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--border-light);
+  width: 100%;
+}
+
+/* Fixed position fallback when sticky doesn't work */
+.main-nav.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Add stronger shadow when scrolling */
+.main-nav.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .main-nav-inner {
@@ -406,6 +427,29 @@ button {
   /* HIDE TOP BAR ON MOBILE */
   .topbar {
     display: none;
+  }
+  
+  /* Reset site-header positioning on mobile */
+  .site-header {
+    position: static;
+  }
+  
+  /* Make main-nav sticky on mobile */
+  .main-nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  /* Fixed position fallback for mobile */
+  .main-nav.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   
   .topbar-inner {

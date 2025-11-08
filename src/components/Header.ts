@@ -8,6 +8,8 @@ export class Header {
   private menuOverlay: HTMLElement | null;
   private dropdown: HTMLElement | null;
   private dropdownLink: HTMLElement | null;
+  private mainNav: HTMLElement | null;
+  private lastScrollY: number;
 
   constructor() {
     this.hamburger = document.querySelector('.hamburger');
@@ -15,6 +17,8 @@ export class Header {
     this.menuOverlay = document.querySelector('.menu-overlay');
     this.dropdown = document.querySelector('.nav-menu .dropdown');
     this.dropdownLink = this.dropdown?.querySelector('.has-sub') || null;
+    this.mainNav = document.querySelector('.main-nav');
+    this.lastScrollY = 0;
 
     this.init();
   }
@@ -24,6 +28,7 @@ export class Header {
     this.setupDropdown();
     this.setupMenuLinkCloseOnClick();
     this.setupEscapeKeyClose();
+    this.setupStickyHeader();
   }
 
   private setupMobileMenuToggle(): void {
@@ -87,5 +92,33 @@ export class Header {
     this.navMenu?.classList.remove('active');
     this.menuOverlay?.classList.remove('active');
     document.body.style.overflow = '';
+  }
+
+  private setupStickyHeader(): void {
+    if (!this.mainNav) return;
+
+    const siteHeader = document.querySelector('.site-header') as HTMLElement;
+    const topbar = document.querySelector('.topbar') as HTMLElement;
+    
+    // Calculate topbar height
+    const topbarHeight = topbar ? topbar.offsetHeight : 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      // When scrolled past topbar, fix the main-nav to top
+      if (currentScrollY > topbarHeight) {
+        this.mainNav?.classList.add('scrolled', 'is-fixed');
+        // Add padding to body to prevent jump
+        if (this.mainNav) {
+          document.body.style.paddingTop = this.mainNav.offsetHeight + 'px';
+        }
+      } else {
+        this.mainNav?.classList.remove('scrolled', 'is-fixed');
+        document.body.style.paddingTop = '0';
+      }
+
+      this.lastScrollY = currentScrollY;
+    });
   }
 }
